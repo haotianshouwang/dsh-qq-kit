@@ -1,0 +1,66 @@
+{
+    "name":  "dsh-qq-kit",
+    "version":  "0.4.2",
+    "description":  "DeepSeek Harness 的 QQ 机器人插件宿主：像 AstrBot 一样自由安装/卸载/开发插件，内置发图、语音、空间、日记、表情、群管理等插件。",
+    "type":  "module",
+    "main":  "./lib/settings.js",
+    "exports":  {
+                    ".":  "./lib/settings.js",
+                    "./client":  "./lib/client.js",
+                    "./server":  "./src/host.js",
+                    "./package.json":  "./package.json"
+                },
+    "license":  "MIT",
+    "keywords":  [
+                     "dsh",
+                     "deepseek-harness",
+                     "dsh-plugin",
+                     "qq",
+                     "onebot",
+                     "mcp",
+                     "snowluma",
+                     "qq-bridge"
+                 ],
+    "engines":  {
+                    "node":  "\u003e=22.19.0"
+                },
+    "files":  [
+                  "lib",
+                  "src",
+                  "plugins",
+                  "scripts",
+                  "roles",
+                  "cordis.patch.yml",
+                  "README.md",
+                  "USAGE.md",
+                  "DEVELOPMENT.md",
+                  "PLUGIN-DEV.md",
+                  "LICENSE"
+              ],
+    "scripts":  {
+                    "selftest":  "node src/selftest.mjs",
+                    "smoke":  "node scripts/mcp-smoke-test.mjs",
+                    "kit":  "node scripts/qqkit.mjs",
+                    "sync":  "node scripts/sync-shims.mjs",
+                    "install:profile":  "node scripts/install.mjs",
+                    "uninstall:profile":  "node scripts/uninstall.mjs"
+                },
+    "dependencies":  {
+                         "@modelcontextprotocol/sdk":  "^1.32.2",
+                         "@deepseek-ai/schemastery":  "^3.18.1",
+                         "https-proxy-agent":  "^7.0.6",
+                         "zod":  "^3.25.76"
+                     },
+    "dsh":  {
+                "bundle":  {
+                               "patch":  "./cordis.patch.yml"
+                           },
+                "client":  {
+                               "inject":  [
+                                              "slots",
+                                              "configForms"
+                                          ],
+                               "platform":  "web"
+                           }
+            }
+}

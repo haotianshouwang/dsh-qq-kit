@@ -1,0 +1,13 @@
+{
+  "id": "qq-diary",
+  "name": "日记",
+  "version": "0.2.0",
+  "description": "写日记 / 翻日记，存成按天划分的 Markdown",
+  "author": "dsh-qq-kit",
+  "builtin": true,
+  "enabled": true,
+  "settings": [
+    { "key": "dir", "label": "日记目录（相对 qq-bridge）", "type": "string", "default": "state/diary" },
+    { "key": "maxChars", "label": "单条最多字数", "type": "number", "default": 2000 }
+  ]
+}

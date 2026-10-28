@@ -1,0 +1,13 @@
+{
+  "id": "qq-qzone",
+  "name": "QQ 空间",
+  "version": "0.2.0",
+  "description": "发 QQ 空间说说（支持配图与可见范围）",
+  "author": "dsh-qq-kit",
+  "builtin": true,
+  "enabled": true,
+  "settings": [
+    { "key": "maxImages", "label": "单条说说最多配图", "type": "number", "default": 9 },
+    { "key": "defaultRight", "label": "默认可见范围(1=公开 4=好友 64=仅自己)", "type": "number", "default": 4 }
+  ]
+}

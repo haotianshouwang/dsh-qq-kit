@@ -1,0 +1,12 @@
+{
+  "id": "qq-voice",
+  "name": "语音条",
+  "version": "0.2.0",
+  "description": "把文字合成语音发出去（Edge 神经音色，失败退回本机 SAPI）",
+  "author": "dsh-qq-kit",
+  "builtin": true,
+  "enabled": true,
+  "settings": [
+    { "key": "maxChars", "label": "单条语音最多字数", "type": "number", "default": 200 }
+  ]
+}

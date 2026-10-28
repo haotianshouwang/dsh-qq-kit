@@ -1,0 +1,12 @@
+{
+  "id": "qq-sticker",
+  "name": "表情收藏",
+  "version": "0.2.0",
+  "description": "把网络图片收藏成 QQ 自定义表情",
+  "author": "dsh-qq-kit",
+  "builtin": true,
+  "enabled": true,
+  "settings": [
+    { "key": "maxRemarkChars", "label": "备注最多字数", "type": "number", "default": 20 }
+  ]
+}

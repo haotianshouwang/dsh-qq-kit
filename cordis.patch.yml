@@ -1,0 +1,24 @@
+# dsh-qq-kit 的 profile 补丁：一个设置页命名空间 + 一个 MCP server。
+#
+# ① `id: qq-extras` 这条 entry 的 id **必须等于命名空间名** —— DSH 0.2.x 靠
+#    “loader entry id == 命名空间” 来定位设置页（见 lib/settings.js 文件头）。
+#    name 指向本包（main = ./lib/settings.js），它导出 Config 供设置页渲染。
+#
+# ② `mcp-qq-extras` 是给 QQ 侧 agent 用的工具面，独立进程，不改任何上游源码。
+#
+# `__SERVER_ENTRY__` 由 scripts/install.mjs 在**安装副本**里替换成绝对路径
+# （用 npm pack 安装，装进 profile 的是真实拷贝，不是软链，所以不会改到仓库本体）。
+- insert:
+    - id: qq-extras
+      name: dsh-qq-kit
+      config: {}
+- insert:
+    - id: mcp-qq-extras
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: qq-extras
+        transport: stdio
+        command: 'node'
+        args:
+          - '__SERVER_ENTRY__'
+        toolCallTimeoutMs: 180000

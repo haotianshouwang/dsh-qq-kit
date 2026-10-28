@@ -1,0 +1,12 @@
+{
+  "id": "qq-image",
+  "name": "发图片",
+  "version": "0.2.0",
+  "description": "把网络图片发到指定会话（宿主下载 + 内网拦截 + 体积上限）",
+  "author": "dsh-qq-kit",
+  "builtin": true,
+  "enabled": true,
+  "settings": [
+    { "key": "maxBytes", "label": "单张图片上限（字节）", "type": "number", "default": 8388608 }
+  ]
+}

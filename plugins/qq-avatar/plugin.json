@@ -1,0 +1,10 @@
+{
+  "id": "qq-avatar",
+  "name": "换头像",
+  "version": "0.2.0",
+  "description": "把机器人 QQ 头像换成一张网络图片",
+  "author": "dsh-qq-kit",
+  "builtin": true,
+  "enabled": true,
+  "settings": []
+}

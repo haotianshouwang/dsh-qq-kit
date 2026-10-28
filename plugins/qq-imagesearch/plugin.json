@@ -1,0 +1,12 @@
+{
+  "id": "qq-imagesearch",
+  "name": "图片搜索",
+  "version": "0.2.0",
+  "description": "必应图片搜索：返回直链与标题，配合发图/收藏表情使用",
+  "author": "dsh-qq-kit",
+  "builtin": true,
+  "enabled": true,
+  "settings": [
+    { "key": "defaultCount", "label": "默认返回张数", "type": "number", "default": 6 }
+  ]
+}
